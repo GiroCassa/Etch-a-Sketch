@@ -5,6 +5,43 @@
 }
 body {
     height: 100%;
+    display: flex;
+}
+.functions {
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.functions div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.colorText{
+    font-size: 28px;
+    font-weight: 700;
+}
+#colorPicker {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+#clearBtn {
+    font-size: 26px;
+    text-align: center;
+    height: 70px;
+    padding: 10px;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    background-color: orangered;
+    cursor: pointer;
 }
 .container {
     height: 100vh;
