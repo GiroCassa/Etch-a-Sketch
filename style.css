@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Pixelify Sans", "sans-serif";
 }
 body {
     height: 100%;
     display: flex;
+    background-color: rgb(197, 44, 24);
+}
+.title {
+    font-size: 50px;
+    font-weight: 900;
+}
+.main {
+    display: flex;
+    flex-direction: column;
 }
 .functions {
     width: 35vw;
@@ -21,18 +33,7 @@ body {
     justify-content: center;
     gap: 20px;
 }
-.colorText{
-    font-size: 28px;
-    font-weight: 700;
-}
-#colorPicker {
-    height: 100px;
-    width: 100px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-}
-#clearBtn {
+div button {
     font-size: 26px;
     text-align: center;
     height: 70px;
@@ -40,8 +41,32 @@ body {
     font-weight: 700;
     border: none;
     border-radius: 15px;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.39);
+}
+.colorText{
+    font-size: 30px;
+    font-weight: 900;
+}
+#colorPicker {
+    height: 100px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(197, 44, 24);
+}
+#clearBtn {
     background-color: orangered;
     cursor: pointer;
+}
+#clearBtn:hover {
+    background-color: rgb(184, 51, 3);
+}
+#rainbowActive {
+    background-color: rgb(255, 0, 200);
+    cursor: pointer;
+}
+#rainbowActive:hover {
+    background-color: rgb(156, 5, 124);
 }
 .container {
     height: 100vh;
@@ -55,7 +80,6 @@ body {
     gap: 40px;
 }
 .btn {
-    background-color: aqua;
     height: 70px;
     width: 100px;
     border: none;

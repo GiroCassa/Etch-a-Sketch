@@ -2,6 +2,7 @@ const canvas = document.querySelector(".canvas");
 const navBar = document.querySelector(".navBar");
 const currentColor = document.querySelector("#colorPicker");
 const clearBtn = document.querySelector("#clearBtn");
+const rainbowActive = document.querySelector("#rainbowActive");
 const btn8 = document.createElement("button");
 const btn16 = document.createElement("button");
 const btn32 = document.createElement("button");
@@ -36,7 +37,16 @@ let startRows = 16;
 let startColumns = 16;
 let isMouseDown = false;
 let newColor = "black";
-isRainbow = false;
+let isRainbow = false;
+
+rainbowActive.addEventListener("click", () => {
+    if (isRainbow == false) {
+        isRainbow = true;
+    } else {
+        isRainbow = false;
+        newColor = "black";
+    }
+})
 
 createCanvas(startRows, startColumns);
 
@@ -115,7 +125,7 @@ document.addEventListener('mouseup', () => {
 
 function clearCanvas(rows, columns) {
     for (let i = 0; i < rows * columns; ++i) {
-    canvas.removeChild(canvas.firstElementChild)
+        canvas.removeChild(canvas.firstElementChild)
     }
 }
 
